@@ -5,4 +5,4 @@ setInterval(() => {
   urls.forEach((url) => {
     fetch(url).then((r) => console.log(`${url} | ${r.status}`));
   });
-}, 60000);
+}, 150000);
