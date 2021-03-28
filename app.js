@@ -1,16 +1,33 @@
 const fetch = require("node-fetch");
-const urls = ["https://dmp.llenax.repl.co"];
+const urls = ["https://dmp.llenax.repl.co", "https://fenix-c.glitch.me"];
 
-let lastFetches = "";
+let queue = [];
+
+function wait() {
+  const next = queue.length
+    ? queue[queue.length - 1].promise
+    : Promise.resolve();
+  let res;
+  const promise = new Promise((resolve) => {
+    res = resolve;
+  });
+
+  queue.push({ res, promise });
+  return next;
+}
+
+function shift() {
+  const deferred = queue.shift();
+  if (typeof deferred !== "undefined") deferred.res();
+}
 
 setInterval(() => {
-  const fetches = urls.map((url) => fetch(url));
-  Promise.all(fetches).then((r) => {
-    lastFetches = r
-      .map((t) => {
-        return `${t.url} | ${t.status}\n`;
-      })
-      .join("");
-    console.log(lastFetches);
+  urls.forEach(async (url) => {
+    await wait();
+    try {
+      await fetch(url);
+    } finally {
+      shift();
+    }
   });
 }, 150000);
