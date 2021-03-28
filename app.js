@@ -1,5 +1,9 @@
 const fetch = require("node-fetch");
-const urls = ["https://dmp.llenax.repl.co", "https://fenix-c.glitch.me"];
+const urls = [
+  "https://dmp.llenax.repl.co",
+  "https://fenix-c.glitch.me",
+  "https://Alliance-Horoscope.llenax.repl.co",
+];
 
 let queue = [];
 
