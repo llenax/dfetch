@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/llenax/dfetch/issues"
   },
-  "homepage": "https://github.com/llenax/dfetch#readme"
+  "homepage": "https://github.com/llenax/dfetch#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
 }
