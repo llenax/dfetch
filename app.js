@@ -3,6 +3,7 @@ const urls = [
   "https://dmp.llenax.repl.co",
   "https://fenix-c.glitch.me",
   "https://Alliance-Horoscope.llenax.repl.co",
+  "https://damla1-deleted.glitch.me/"
 ];
 
 let queue = [];
