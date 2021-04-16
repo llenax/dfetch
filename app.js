@@ -5,7 +5,8 @@ const urls = [
   "https://Alliance-Horoscope.llenax.repl.co",
   "https://damla1-deleted.glitch.me/",
   "https://Alliance-1.llenax.repl.co",
-  "https://sen-anan-yaniv1.glitch.me/"
+  "https://sen-anan-yaniv1.glitch.me/",
+  "https://brainy-ebony-beast.glitch.me/",
 ];
 
 let queue = [];
