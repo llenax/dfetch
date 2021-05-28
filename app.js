@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 const urls = [
   "https://dmp.llenax.repl.co",
-  "https://fenix-c.glitch.me",
+  "https://test-lena.glitch.me/",
   "https://Alliance-Horoscope.llenax.repl.co",
   "https://damla1-deleted.glitch.me/",
   "https://Alliance-1.llenax.repl.co",
